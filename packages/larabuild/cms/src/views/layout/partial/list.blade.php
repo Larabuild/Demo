@@ -55,9 +55,9 @@
 		@if(!isset($hide_edit) || $hide_edit == false)
 		<td width="50" class="alignright">
 			@if(isset($data->id))
-			{!! link_to_route($resource . '.show', "Bekijken", ["id" => $data->id]) !!}
+			{!! link_to_route($resource . '.show', "Bewerken", ["id" => $data->id]) !!}
 			@else
-			{!! link_to_route($resource . '.show', "Bekijken", array($data->id)) !!}
+			{!! link_to_route($resource . '.show', "Bewerken", array($data->id)) !!}
 			@endif
 		</td>
 		@endif

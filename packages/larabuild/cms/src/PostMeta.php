@@ -5,8 +5,8 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model {
     protected $table = "post_meta";
     protected $fillable = [
-        "meta_key",
-        "meta_value",
+        "name",
+        "value",
         "post_id"
     ];
 
