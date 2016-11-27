@@ -14,7 +14,7 @@ class PostObserver
      */
     public function creating(Post $user)
     {
-        dd('test');
+        //dd('test');
     }
 
     /**
