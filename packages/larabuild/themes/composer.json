@@ -1,0 +1,17 @@
+{
+    "name": "larabuild/themes",
+    "version":"0.0.1",
+    "description": "Laravel Theme management",
+    "authors": [
+        {
+            "name": "edgarravenhorst",
+            "email": "edgar@code.rehab"
+        }
+    ],
+    "require": {},
+    "autoload": {
+      "psr-4": {
+        "Larabuild\\Themes\\": "src/"
+      }
+    }
+}

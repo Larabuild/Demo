@@ -1,0 +1,21 @@
+{
+    "name": "larabuild/cms",
+    "description": "Laravel Theme management",
+    "version": "0.0.2",
+    "authors": [
+        {
+            "name": "edgarravenhorst",
+            "email": "edgar@code.rehab"
+        }
+    ],
+    "require": {
+      "ktquez/laravel-tinymce": "^1.0",
+      "laravelcollective/html": "^5.3",
+      "zizaco/entrust": "^1.7"
+    },
+    "autoload": {
+       "psr-4": {
+            "Larabuild\\Cms\\": "src/"
+        }
+    }
+}
