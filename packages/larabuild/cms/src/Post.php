@@ -9,7 +9,8 @@ class Post extends Model {
         "content",
         "url",
         "user_id",
-        "slug"
+        "slug",
+        "template_id"
     ];
 
     public function data(){

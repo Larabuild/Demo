@@ -4,6 +4,7 @@ namespace Larabuild\Cms\Controllers;
 
 use Larabuild\Cms\Controllers\Controller;
 use Larabuild\Cms\Post;
+use Larabuild\Cms\Template;
 
 use Illuminate\Http\Request;
 use Redirect;

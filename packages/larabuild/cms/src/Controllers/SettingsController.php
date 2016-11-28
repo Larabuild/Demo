@@ -43,13 +43,17 @@ class SettingsController extends Controller
 
   public function store(Request $request){
     $this->validate($request, $this->validations);
-    Setting::create($request->all());
+    $params = $request->all();
+    $params['hidden'] = $request->get('hidden', 0);
+    Setting::create($params);
     return Redirect::route('setting.index');
   }
 
   public function update(Request $request, $id){
     $this->validate($request, $this->validations);
-    Setting::find($id)->update($request->all());
+    $params = $request->all();
+    $params['hidden'] = $request->get('hidden', 0);
+    Setting::find($id)->update($params);
     return Redirect::route('setting.index');
   }
 

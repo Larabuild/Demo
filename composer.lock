@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c1fe7b2f93c773843fa74a6741a52f45",
-    "content-hash": "04f5e95a118eb0168ce153ef1fed33f2",
+    "hash": "b14aad29bc2c8a35ad281e1f312cbabb",
+    "content-hash": "2d597c555ece207755dfe34590b590a5",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -249,6 +249,54 @@
             "time": "2015-04-20 18:58:01"
         },
         {
+            "name": "jenssegers/model",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jenssegers/model.git",
+                "reference": "9a5427ec506fb206f3a5ba5871bdf5669a4b84bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jenssegers/model/zipball/9a5427ec506fb206f3a5ba5871bdf5669a4b84bf",
+                "reference": "9a5427ec506fb206f3a5ba5871bdf5669a4b84bf",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^5.0",
+                "illuminate/support": "^4.0|^5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0|^5.0",
+                "satooshi/php-coveralls": "^0.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jenssegers\\Model\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Segers",
+                    "homepage": "https://jenssegers.com"
+                }
+            ],
+            "description": "An Laravel eloquent-like model class, for Laravel and other frameworks",
+            "homepage": "https://github.com/jenssegers/model",
+            "keywords": [
+                "eloquent",
+                "laravel",
+                "model"
+            ],
+            "time": "2015-12-28 14:03:27"
+        },
+        {
             "name": "jeremeamia/SuperClosure",
             "version": "2.2.0",
             "source": {
@@ -355,7 +403,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/larabuild/cms/",
-                "reference": "e98a30beb63b1dc54e421b0f4c0bc6d396a442bb",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -383,7 +431,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/larabuild/themes/",
-                "reference": "095026014af9d80abde461cda34c86279c7f6808",
+                "reference": null,
                 "shasum": null
             },
             "type": "library",

@@ -16,9 +16,11 @@ class CreateSettingsTable extends Migration
       $table->increments("id");
       $table->string("bundle");
       $table->string("name");
-      $table->longtext("value");
+      $table->string("type")->default("text");
+      $table->longtext("value")->nullable();
       $table->string("title");
       $table->string("description");
+      $table->integer("is_hidden")->default(0);
       $table->timestamps();
     });
   }

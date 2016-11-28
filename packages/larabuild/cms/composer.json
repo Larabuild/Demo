@@ -11,7 +11,8 @@
     "require": {
       "ktquez/laravel-tinymce": "^1.0",
       "laravelcollective/html": "^5.3",
-      "zizaco/entrust": "^1.7"
+      "zizaco/entrust": "^1.7",
+      "jenssegers/model": "^1.1"
     },
     "autoload": {
        "psr-4": {

@@ -56,6 +56,10 @@
                         @else
                             <li><a href="{{route('user.index')}}">Users</a></li>
                             <li><a href="{{route('post.index')}}">Posts</a></li>
+                            @foreach($templates as $template)
+                            <li><a href="{{route('post.show.template', $template->slug)}}">{{$template->title}}</a></li>
+                            @endforeach
+                            <li><a href="{{route('template.index')}}">Templates</a></li>
                             <li><a href="{{route('setting.index')}}">Settings</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

@@ -23,7 +23,8 @@
               [
                 'title'   => "Label",
                 'description' => "Description",
-                'value' => "Value",
+                'type' => "Input type",
+                'is_hidden' => "Hidden"
               ]
             ])
         </div>
