@@ -76,7 +76,6 @@
 
 @else
 Er zijn nog geen items aanwezig! <br />
-<a href="{{route($resource . '.create')}}" >+ Create {{$resource}}</a>
 @endif
 
 @else

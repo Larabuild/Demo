@@ -27,6 +27,8 @@ class PostController extends Controller
   public function create(Request $request){
     $view = view("cms::post.single");
     $view->post = new Post();
+    if($request->has('template'))
+      $view->template_id = Template::where('slug', $request->get('template'))->first()->id;
     return $view;
   }
 

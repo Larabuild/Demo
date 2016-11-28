@@ -10,10 +10,14 @@
 {!! Form::hidden("user_id", Auth::user()->id) !!}
 
 @if(!$post->id)
+@if(!isset($template_id))
 <div class="form-group {{ $errors->has('template_id') ? 'has-error' : '' }}">
   {!! Form::label("Template") !!}
   {!! Form::select("template_id", $templates->pluck("title", "id"), $post->template_id, ["class" => 'form-control']) !!}
 </div>
+@else
+{!! Form::hidden("template_id", $template_id) !!}
+@endif
 @endif
 
 <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">

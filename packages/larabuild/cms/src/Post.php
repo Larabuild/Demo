@@ -21,6 +21,10 @@ class Post extends Model {
       return $this->belongsTo('\App\User', 'user_id');
     }
 
+    public function template(){
+      return $this->belongsTo('\Larabuild\Cms\Template', 'template_id');
+    }
+
     public function getAuthorNameAttribute(){
       return $this->author->name;
     }

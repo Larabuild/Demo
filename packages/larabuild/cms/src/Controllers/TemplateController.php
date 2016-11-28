@@ -25,7 +25,8 @@ class TemplateController extends Controller
 
   public function show_posts(Request $request, $slug){
     $view = view("cms::post.index");
-    $view->posts = Template::where('slug', $slug)->first()->posts;
+    $view->template = Template::where('slug', $slug)->first();
+    $view->posts = $view->template->posts;
     return $view;
   }
 
