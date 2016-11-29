@@ -7756,4 +7756,30 @@ table.compact-list td, table.compact-list th {
   color: #e31919;
 }
 
+.gridcontainer .row {
+  margin: 0;
+}
+
+.gridcontainer [class^="col-md-"] {
+  min-height: 50px;
+  border: 2px dashed #ddd;
+  margin-bottom: 10px;
+  margin-left: -1px;
+  margin-right: -1px;
+  padding: 15px;
+}
+
+.gridcontainer .panel.list-group-item {
+  margin-bottom: 22px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 0;
+}
+
+.gridcontainer .panel.list-group-item.panel-default {
+  border-color: #d3e0e9;
+}
+
 /*# sourceMappingURL=admin.css.map */
