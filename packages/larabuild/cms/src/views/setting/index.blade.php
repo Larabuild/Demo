@@ -22,7 +22,7 @@
               'list_params' =>
               [
                 'title'   => "Label",
-                'description' => "Description",
+                'name' => "Key",
                 'type' => "Input type",
                 'is_hidden' => "Hidden"
               ]

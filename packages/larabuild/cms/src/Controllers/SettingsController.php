@@ -59,6 +59,6 @@ class SettingsController extends Controller
 
   public function destroy(Request $request, $id){
     setting::find($id)->delete();
-    return Redirect::route('settings.index');
+    return Redirect::route('setting.index');
   }
 }

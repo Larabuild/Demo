@@ -18,6 +18,7 @@
       [
       'title'   => ["route" => 'post.show', "label" => "Naam"],
       'author_name'  => ["route" => 'post.show', "label" => "Author"],
+      'template_name' => "Template",
       'excerpt' => "In short"
       ]
       ])

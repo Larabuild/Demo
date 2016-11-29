@@ -29,6 +29,10 @@ class Post extends Model {
       return $this->author->name;
     }
 
+    public function getTemplateNameAttribute(){
+      return $this->template ? $this->template->title : "not-set";
+    }
+
     public function getExcerptAttribute(){
       return substr($this->content, 0, 100) . "..";
     }

@@ -12,7 +12,7 @@
 
   <!-- Styles -->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="/larabuild/cms/css/admin.css" rel="stylesheet">
+  <link href="/css/admin.css" rel="stylesheet">
 
   <!-- Scripts -->
   <script>
@@ -59,7 +59,7 @@
             @foreach($templates as $template)
             <li><a href="{{route('post.show.template', $template->slug)}}">{{$template->title}}</a></li>
             @endforeach
-            
+
             <li><a href="{{route('user.index')}}">Users</a></li>
 
             <li class="dropdown">
@@ -102,6 +102,6 @@
 </div>
 
 <!-- Scripts -->
-<script src="/js/app.js"></script>
+<script src="/js/admin.js"></script>
 </body>
 </html>
