@@ -1,0 +1,19 @@
+main#pagecontainer .panel-default{
+  border-radius: 0;
+  border: 1px solid #ccc;
+  padding:0;
+
+  .panel-heading{
+    background: #ddd;
+    border-color: #ccc;
+    border-radius: 0;
+  }
+}
+
+.panel-inner{
+  display: none;
+}
+
+.panel .panel-inner{
+  display: block;
+}

@@ -1,0 +1,43 @@
+body{
+  background: #eee;
+}
+
+.navbar{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+}
+
+aside#menu{
+  position:fixed;
+  left:0;
+  width:200px;
+  top:50px;
+  bottom:0;
+  background:#44082c;
+  padding:35px 0;
+
+  .nav-item{
+    padding:0
+  }
+
+  .nav-link{
+    padding: 7px 15px 7px 25px;
+    border-radius: 0;
+    color:#fff;
+    opacity: 0.7;
+    font-weight: 500;
+  }
+
+  .nav > li > a:hover, .nav > li > a:focus.nav > li > a:hover, .nav > li > a:focus{
+    background-color: rgba(255,255,255,0.2);
+  }
+}
+
+main#pagecontainer{
+  position: relative;
+  margin-top: 60px;
+  margin-left:200px;
+  padding:2.5%;
+}

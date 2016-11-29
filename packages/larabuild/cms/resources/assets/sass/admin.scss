@@ -9,7 +9,13 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 //cms
-@import "list";
+@import "default-layout";
+@import "components/list";
+@import "components/panel";
+
+.float-right{
+  float:right;
+}
 
 .gridcontainer{
   .row{
@@ -23,6 +29,11 @@
     margin-left: -1px;
     margin-right: -1px;
     padding:15px;
+    &.parent{
+      border:0;
+      padding:0;
+      margin: 0 -2px;
+    }
   }
 
   .panel.list-group-item{

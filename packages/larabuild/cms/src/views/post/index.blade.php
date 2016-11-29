@@ -1,7 +1,6 @@
 @extends('cms::layout.default')
 
 @section('content')
-<div class="container">
   <div class="row">
 
     <a href="{{route('post.create', isset($template) ? ['template' => $template->slug] : null)}}" >
@@ -24,5 +23,4 @@
       ])
     </div>
   </div>
-</div>
 @endsection

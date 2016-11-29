@@ -7688,6 +7688,50 @@ button.close {
   }
 }
 
+body {
+  background: #eee;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+aside#menu {
+  position: fixed;
+  left: 0;
+  width: 200px;
+  top: 50px;
+  bottom: 0;
+  background: #44082c;
+  padding: 35px 0;
+}
+
+aside#menu .nav-item {
+  padding: 0;
+}
+
+aside#menu .nav-link {
+  padding: 7px 15px 7px 25px;
+  border-radius: 0;
+  color: #fff;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+aside#menu .nav > li > a:hover, aside#menu .nav > li > a:focus.nav > li > a:hover, aside#menu .nav > li > a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+main#pagecontainer {
+  position: relative;
+  margin-top: 60px;
+  margin-left: 200px;
+  padding: 2.5%;
+}
+
 table.list, table.compact-list {
   width: 100%;
   border-collapse: collapse;
@@ -7756,6 +7800,30 @@ table.compact-list td, table.compact-list th {
   color: #e31919;
 }
 
+main#pagecontainer .panel-default {
+  border-radius: 0;
+  border: 1px solid #ccc;
+  padding: 0;
+}
+
+main#pagecontainer .panel-default .panel-heading {
+  background: #ddd;
+  border-color: #ccc;
+  border-radius: 0;
+}
+
+.panel-inner {
+  display: none;
+}
+
+.panel .panel-inner {
+  display: block;
+}
+
+.float-right {
+  float: right;
+}
+
 .gridcontainer .row {
   margin: 0;
 }
@@ -7767,6 +7835,12 @@ table.compact-list td, table.compact-list th {
   margin-left: -1px;
   margin-right: -1px;
   padding: 15px;
+}
+
+.gridcontainer [class^="col-md-"].parent {
+  border: 0;
+  padding: 0;
+  margin: 0 -2px;
 }
 
 .gridcontainer .panel.list-group-item {

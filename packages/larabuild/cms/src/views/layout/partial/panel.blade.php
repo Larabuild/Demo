@@ -1,3 +1,5 @@
 <panel id="{{$id}}" title="{{$title}}">
-      @yield("body")
+  <div class="panel-inner">
+  @yield("body")
+  </div>
 </panel>

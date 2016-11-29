@@ -1,7 +1,6 @@
 @extends('cms::layout.default')
 
 @section('content')
-<div class="container">
     <div class="row">
       <a href="{{route('setting.create')}}" >+ Create setting</a>
         <div class="col-md-10 col-md-offset-0">
@@ -29,5 +28,4 @@
             ])
         </div>
     </div>
-</div>
 @endsection

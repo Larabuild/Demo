@@ -1,7 +1,6 @@
 @extends('cms::layout.default')
 
 @section('content')
-<div class="container">
     <div class="row">
 
       <a href="{{route('user.create')}}" >+ Create user</a>
@@ -18,5 +17,4 @@
             ])
         </div>
     </div>
-</div>
 @endsection

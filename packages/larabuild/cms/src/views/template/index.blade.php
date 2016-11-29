@@ -1,7 +1,6 @@
 @extends('cms::layout.default')
 
 @section('content')
-<div class="container">
     <div class="row">
 
       <a href="{{route('template.create')}}" >+ Create template</a>
@@ -20,5 +19,4 @@
             ])
         </div>
     </div>
-</div>
 @endsection
