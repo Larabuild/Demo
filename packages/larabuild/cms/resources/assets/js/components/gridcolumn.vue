@@ -1,6 +1,11 @@
 <template>
-  <div v-bind:class="[columnsize, parent ? 'parent' : '']"  v-sortable="sortableOptions">
+  <div v-bind:class="[columnsize, parent ? 'parent' : '']">
+    <div class="inner" v-sortable="sortableOptions">
     <slot></slot>
+    <panel v-for="n in createdPanels" title="Title"></panel>
+    </div>
+    <div class="add" @click="create_panel">+</div>
+    <hidden class="">
   </div>
 </template>
 
@@ -12,15 +17,19 @@ export default {
       return "col-md-" + this.size
     }
   },
-  data(){ return {
-    sortableOptions:{
-      handle:".panel-heading",
-      group:this.parent ? "template-grid" : "",
-    }
+  data(){
+    return {
+      createdPanels: 0,
+      sortableOptions:{
+        handle:".panel-heading",
+        group:this.parent ? "template-grid" : ""
+      }
     }
   },
-  mounted() {
-    //var sortable = Sortable.create(document.getElementById('items'), {})
+  methods: {
+    create_panel: function(){
+      this.createdPanels ++;
+    }
   }
 }
 </script>

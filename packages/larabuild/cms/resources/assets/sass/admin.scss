@@ -23,16 +23,43 @@
   }
 
   [class^="col-md-"] {
-    min-height: 50px;
     border:2px dashed #ddd;
     margin-bottom:10px;
     margin-left: -1px;
     margin-right: -1px;
     padding:15px;
+    .inner{
+
+        min-height: 50px;
+    }
+
+    div.add, div.add:active, div.add:focus{
+      width:100%;
+      background:transparent;
+      font-size:40px;
+      line-height: 100%;
+      padding:0;
+      border:0;
+      margin:0;
+      outline: 0;
+      text-align: center;
+      color:#aaa;
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover{
+        color:#222;
+        font-size: 45px;
+      }
+    }
+
     &.parent{
       border:0;
       padding:0;
       margin: 0 -2px;
+      div.add{display: none}
+        [class^="col-md-"] div.add{
+          display: block;
+        }
     }
   }
 

@@ -13,12 +13,12 @@
            </gridcolumn>
         </gridrow>
         <gridrow>
-          <gridcolumn size="6" > <panel title="Panel 2">{{Auth::user()->name}}</panel> </gridcolumn>
-          <gridcolumn size="6" > <panel title="Panel 3">The body</panel> </gridcolumn>
+          <gridcolumn size="6" > <panel title="Panel 2"><div class="panel-inner">{{Auth::user()->name}}</div></panel></gridcolumn>
+          <gridcolumn size="6" > <panel title="Panel 3"><div class="panel-inner">The body</div></panel></gridcolumn>
         </gridrow>
     </gridcolumn>
 
-    <gridcolumn size="4" > <panel title="Panel 4">The body</panel> </gridcolumn>
+    <gridcolumn size="4" > <panel title="Panel 1"><div class="panel-inner">The body</div></panel></gridcolumn>
   </gridrow>
   <gridrow>
     <gridcolumn size="4"></gridcolumn>

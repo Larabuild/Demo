@@ -2,12 +2,7 @@
 
 @section('body')
 
-{!! Form::open([
-  'route' => $post->id ? ['post.update', $post->id] : 'post.store',
-  'method' => $post->id ? 'put' : 'post']) !!}
-{!! Form::token() !!}
 
-{!! Form::hidden("user_id", Auth::user()->id) !!}
 
 @if(!$post->id)
 @if(!isset($template_id))
@@ -44,6 +39,4 @@
   @endif
 </div>
 
-{!! Form::submit($post->id ? 'Bijwerken' : "Opslaan") !!}
-{!! Form::close() !!}
 @stop
