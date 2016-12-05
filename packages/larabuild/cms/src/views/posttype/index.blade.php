@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
 
-      <a href="{{route('template.create')}}" >+ Create Post Type</a>
+      <a href="{{route('posttype.create')}}" >+ Create Post Type</a>
         <div class="col-md-10 col-md-offset-0">
             @include("cms::layout.partial.list", [
               "id" => "posttype-overview",
