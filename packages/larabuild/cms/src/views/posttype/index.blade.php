@@ -8,7 +8,7 @@
             @include("cms::layout.partial.list", [
               "id" => "posttype-overview",
               "title" => "All Post Types",
-              "data" => $posttype,
+              "data" => $posttypes,
               'resource' => 'posttype',
               'list_params' =>
               [
