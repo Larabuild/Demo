@@ -12,7 +12,7 @@ class CreateCmsLayoutsTable extends Migration
   */
   public function up()
   {
-    Schema::create("cms_layout", function(Blueprint $table){
+    Schema::create("cms_layouts", function(Blueprint $table){
       $table->increments("id");
       $table->string("table_name")->nullable();
       $table->string("title");
