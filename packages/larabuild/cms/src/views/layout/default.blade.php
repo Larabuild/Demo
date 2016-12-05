@@ -59,7 +59,6 @@
               Settings <span class="caret"></span>
             </a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="{{route('posttype.index')}}">Post Types</a></li>
               <li><a href="{{route('setting.index')}}">Global</a></li>
             </ul>
           </li>
@@ -95,10 +94,6 @@
       <ul class="nav nav-pills nav-stacked">
         <li class="nav-item"><a class="nav-link" href="/admin/dashboard">Dashboard</a></li>
         <li class="nav-item"><a class="nav-link" href="{{route('post.index')}}">Posts</a></li>
-        @foreach($posttypes as $posttype)
-        <li class="nav-item"><a class="nav-link" href="{{route('post.show.type', $posttype->slug)}}">{{$posttype->title}}</a></li>
-        @endforeach
-
         <li class="nav-item"><a class="nav-link" href="{{route('user.index')}}">Users</a></li>
       </ul>
     </section>

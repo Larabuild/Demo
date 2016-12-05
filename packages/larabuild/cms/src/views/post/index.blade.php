@@ -7,7 +7,7 @@
       + Create {{isset($posttype) ? $posttype->title : "post"}}
     </a>
 
-    <div class="col-md-12 col-md-offset-0">
+    <div class="col-md-10 col-md-offset-0">
       @include("cms::layout.partial.list", [
       "id" => "post-overview",
       "title" => isset($posttype) ? $posttype->title : "Posts",

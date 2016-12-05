@@ -2,27 +2,25 @@
 
 @section('content')
 {!! Form::open([
-  'route' => $post->id ? ['post.update', $post->id] : 'post.store',
-  'method' => $post->id ? 'put' : 'post']) !!}
+  'route' => $model->id ? ['post.update', $model->id] : 'post.store',
+  'method' => $model->id ? 'put' : 'post']) !!}
 {!! Form::token() !!}
 
 {!! Form::hidden("user_id", Auth::user()->id) !!}
+
 <grid>
   <gridrow>
     <gridcolumn size="8">
       @include("cms::post.partial.basicinfo", [
       "id" => "basic-info",
-      "title" => (isset($post->template) ? $post->template->title . ": " : "Post: ") . $post->title
+      "title" => (isset($model->template) ? $model->template->title . ": " : "Post: ") . $model->title
       ])
     </gridcolumn>
     <gridcolumn size="4">
-      <panel title="Example">
-      <div class="panel-inner">
-
-        Dit is een voorbeeldpaneel
-        {!! Form::submit($post->id ? 'Bijwerken' : "Opslaan") !!}
-        </div>
-      </panel>
+      @include("cms::dashboard.partial.welcome2", [
+      "id" => "basic-info",
+      "title" => (isset($model->template) ? $model->template->title . ": " : "Post: ") . $model->title
+      ])
     </gridcolumn>
   </gridrow>
 </grid>

@@ -12,14 +12,16 @@ class CreateSettingsTable extends Migration
   */
   public function up()
   {
-    Schema::create("settings", function(Blueprint $table){
+    Schema::create("cms_settings", function(Blueprint $table){
       $table->increments("id");
       $table->string("bundle");
       $table->string("name");
-      $table->string("type")->default("text");
       $table->longtext("value")->nullable();
-      $table->string("title");
-      $table->string("description");
+      $table->string("label");
+      $table->string("subtext")->default("");
+      $table->string("placeholder")->default("");
+      $table->string("input_type")->default("text");
+      $table->text("validations")->nullable();
       $table->integer("is_hidden")->default(0);
       $table->timestamps();
     });
@@ -32,6 +34,6 @@ class CreateSettingsTable extends Migration
   */
   public function down()
   {
-    Schema::drop('settings');
+    Schema::drop('cms_settings');
   }
 }

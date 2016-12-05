@@ -20,7 +20,7 @@
               'resource' => 'setting',
               'list_params' =>
               [
-                'title'   => "Label",
+                'label'   => "Label",
                 'name' => "Key",
                 'type' => "Input type",
                 'is_hidden' => "Hidden"

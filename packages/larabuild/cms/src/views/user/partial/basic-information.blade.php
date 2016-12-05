@@ -1,6 +1,6 @@
 @extends("cms::layout.partial.panel")
 
-@section('body')
+@section('body-' . $id)
 {!! Form::open([
   'route' => $user->id ? ['user.update', $user->id] : 'user.store',
   'method' => $user->id ? 'put' : 'post']) !!}

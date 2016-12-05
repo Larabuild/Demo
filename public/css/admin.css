@@ -7745,6 +7745,10 @@ table.list th, table.list td, table.compact-list th, table.compact-list td {
   text-align: left;
   font-size: 13px;
   line-height: 100%;
+  vertical-align: middle;
+  font-weight: 400;
+  color: inherit;
+  display: table-cell;
 }
 
 table.list th.alignright, table.list td.alignright, table.compact-list th.alignright, table.compact-list td.alignright {
@@ -7768,6 +7772,7 @@ table.list th, table.compact-list th {
   padding-bottom: 1%;
   border-bottom: 3px solid #ddd;
   font-size: 14px;
+  font-weight: 600;
 }
 
 table.compact-list td, table.compact-list th {

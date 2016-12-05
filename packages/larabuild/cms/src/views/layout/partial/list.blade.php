@@ -1,6 +1,6 @@
 @extends('cms::layout.partial.panel')
 
-@section('body')
+@section('body-' . $id)
 @if(isset($data))
 @if(count($data) > 0 )
 

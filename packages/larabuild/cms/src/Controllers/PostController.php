@@ -4,7 +4,7 @@ namespace Larabuild\Cms\Controllers;
 
 use Larabuild\Cms\Controllers\Controller;
 use Larabuild\Cms\Post;
-use Larabuild\Cms\PostType;
+use Larabuild\Cms\Layout;
 
 use Illuminate\Http\Request;
 use Redirect;
@@ -25,24 +25,27 @@ class PostController extends Controller
   }
 
   public function create(Request $request){
-    $view = view("cms::post.single");
-    $view->post = new Post();
-    if($request->has('type'))
-      $view->type_id = PostType::where('slug', $request->get('type'))->first()->id;
+    $view = view("cms::single.default");
+    $layout = Layout::findDefault('posts');
+    $view->model = new Post();
+    $view->model->layout_id = $layout->id;
+    $view->layout = $view->model->layout->content;
     return $view;
   }
 
   public function show(Request $request, $post_id){
-    $view = view("cms::post.single");
-    $view->post = Post::find($post_id);
+    $view = view("cms::single.default");
+    $view->model = Post::find($post_id);
+    $view->layout = $view->model->layout->content;
     return $view;
   }
 
   public function store(Request $request){
     $this->validate($request, $this->validations);
-
+    $layout = Layout::findDefault('posts');
     $params = $request->all();
     $params["slug"] = str_slug($request->get("title"));
+    $params["layout_id"] = $layout->id;
 
     $post = Post::create($params);
     return Redirect::route('post.show', $post->id);

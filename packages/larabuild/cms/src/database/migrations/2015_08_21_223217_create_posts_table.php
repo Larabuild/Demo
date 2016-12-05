@@ -16,11 +16,10 @@ class CreatePostsTable extends Migration
             $table->increments("id");
             $table->integer("parent")->default(0);
             $table->integer("user_id");
+            $table->integer("layout_id");
             $table->string("slug");
             $table->string("title");
-            $table->longtext("content");
-            $table->string("type")->default("post");
-            $table->uuid('guid')->nullable();
+            $table->longtext("content")->nullable();
             $table->timestamps();
         });
     }

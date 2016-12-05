@@ -4,15 +4,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Setting extends Model {
 
-  protected $table = "settings";
+  protected $table = "cms_settings";
   protected $fillable = [
     "bundle",
     "name",
     "value",
-    "title",
-    "type",
+    "label",
+    "input_type",
     "is_hidden",
-    "description",
+    "subtext",
   ];
 
   public function collect($name){

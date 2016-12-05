@@ -1,6 +1,6 @@
 @extends('cms::layout.partial.panel')
 
-@section('body')
+@section('body-' . $id)
 
 {!! Form::open([
   'route' => $setting->id ? ['setting.update', $setting->id] : 'setting.store',
@@ -17,19 +17,19 @@
     @endif
   </div>
 
-  <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
-    {!! Form::label("Title") !!}
-    {!! Form::text("title", $setting->title, ["class" => 'form-control']) !!}
-    @if ($errors->has('title'))
-    <span class="help-block"><strong>{{ $errors->first('title') }}</strong></span>
+  <div class="form-group {{ $errors->has('label') ? 'has-error' : '' }}">
+    {!! Form::label("Label") !!}
+    {!! Form::text("label", $setting->label, ["class" => 'form-control']) !!}
+    @if ($errors->has('label'))
+    <span class="help-block"><strong>{{ $errors->first('label') }}</strong></span>
     @endif
   </div>
 
-  <div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
-    {!! Form::label("description") !!}
-    {!! Form::text("description", $setting->description, ["class" => 'form-control']) !!}
-    @if ($errors->has('description'))
-    <span class="help-block"><strong>{{ $errors->first('description') }}</strong></span>
+  <div class="form-group {{ $errors->has('subtext') ? 'has-error' : '' }}">
+    {!! Form::label("subtext") !!}
+    {!! Form::text("subtext", $setting->subtext, ["class" => 'form-control']) !!}
+    @if ($errors->has('subtext'))
+    <span class="help-block"><strong>{{ $errors->first('subtext') }}</strong></span>
     @endif
   </div>
 
