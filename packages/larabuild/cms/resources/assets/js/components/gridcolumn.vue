@@ -5,7 +5,7 @@
     <panel v-for="n in createdPanels" title="Title"></panel>
     </div>
     <div class="add" @click="create_panel">+</div>
-    <hidden class="">
+    <hidden name="column[]">
   </div>
 </template>
 

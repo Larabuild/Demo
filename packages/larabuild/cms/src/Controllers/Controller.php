@@ -6,7 +6,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
-use Larabuild\Cms\Template;
+use Larabuild\Cms\PostType;
 use View;
 
 class Controller extends BaseController
@@ -14,6 +14,6 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function __construct() {
-       View::share ( 'templates', Template::all() );
+       View::share ( 'posttypes', PostType::all() );
     }
 }

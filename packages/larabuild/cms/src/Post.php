@@ -10,7 +10,7 @@ class Post extends Model {
         "url",
         "user_id",
         "slug",
-        "template_id"
+        "type_id"
     ];
 
     public function data(){
@@ -22,7 +22,7 @@ class Post extends Model {
     }
 
     public function template(){
-      return $this->belongsTo('\Larabuild\Cms\Template', 'template_id');
+      return $this->belongsTo('\Larabuild\Cms\PostType', 'type_id');
     }
 
     public function getAuthorNameAttribute(){

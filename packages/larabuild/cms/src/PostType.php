@@ -3,9 +3,9 @@
 use Illuminate\Database\Eloquent\Model;
 use Larabuild\Cms\Setting;
 
-class Template extends Model {
+class PostType extends Model {
 
-  protected $table = "templates";
+  protected $table = "post_type";
   protected $fillable = [
     "title",
     "slug",
@@ -16,7 +16,7 @@ class Template extends Model {
   ];
 
   public function posts(){
-    return $this->hasMany("Larabuild\Cms\Post", "template_id");
+    return $this->hasMany("Larabuild\Cms\Post", "type_id");
   }
 
 }

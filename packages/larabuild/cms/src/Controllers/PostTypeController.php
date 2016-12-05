@@ -3,12 +3,12 @@
 namespace Larabuild\Cms\Controllers;
 
 use Larabuild\Cms\Controllers\Controller;
-use Larabuild\Cms\Template;
+use Larabuild\Cms\PostType;
 
 use Illuminate\Http\Request;
 use Redirect;
 
-class TemplateController extends Controller
+class PostTypeController extends Controller
 {
 
   protected $validations = [
@@ -18,27 +18,27 @@ class TemplateController extends Controller
   ];
 
   public function index(){
-    $view = view("cms::template.index");
-    $view->templates = Template::all();
+    $view = view("cms::posttype.index");
+    $view->posttypes = PostType::all();
     return $view;
   }
 
   public function show_posts(Request $request, $slug){
     $view = view("cms::post.index");
-    $view->template = Template::where('slug', $slug)->first();
-    $view->posts = $view->template->posts;
+    $view->posttype = PostType::where('slug', $slug)->first();
+    $view->posts = $view->posttype->posts;
     return $view;
   }
 
   public function create(Request $request){
-    $view = view("cms::template.single");
-    $view->template = new Template();
+    $view = view("cms::posttype.single");
+    $view->posttype = new postType();
     return $view;
   }
 
   public function show(Request $request, $id){
-    $view = view("cms::template.single");
-    $view->template = Template::find($id);
+    $view = view("cms::posttype.single");
+    $view->posttype = postType::find($id);
     return $view;
   }
 
@@ -49,21 +49,21 @@ class TemplateController extends Controller
     $params["slug"] = str_slug($request->get("title"));
     $params["properties"] = "{}";
     $params["admin_layout"] = "{}";
-    $params["view"] = "templates." . str_slug($request->get("title"));
+    $params["view"] = "posttype." . str_slug($request->get("title"));
 
-    $template = Template::create($params);
-    return Redirect::route('template.show', $template->id);
+    $template = postType::create($params);
+    return Redirect::route('posttype.show', $template->id);
   }
 
   public function update(Request $request, $id){
     $this->validate($request, $this->validations);
 
-    Template::find($id)->update($request->all());
-    return Redirect::route('template.show', $id);
+    postType::find($id)->update($request->all());
+    return Redirect::route('posttype.show', $id);
   }
 
   public function destroy(Request $request, $id){
     Template::find($id)->delete();
-    return Redirect::route('template.index');
+    return Redirect::route('posttype.index');
   }
 }

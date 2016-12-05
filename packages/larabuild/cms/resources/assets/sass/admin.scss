@@ -19,18 +19,31 @@
 
 .gridcontainer{
   .row{
+    border-top: 5px solid #f5f5f5;
+    padding:15px 0;
     margin:0;
   }
+  .row > .inner{
+    display: table;
+    width:100%;
+  }
 
-  [class^="col-md-"] {
-    border:2px dashed #ddd;
+  [class^="col-"] {
+    float:none;
+    display: table-cell;
     margin-bottom:10px;
-    margin-left: -1px;
-    margin-right: -1px;
-    padding:15px;
-    .inner{
+    vertical-align: top;
+    //margin-left: -1px;
+    //margin-right: -1px;
+    padding:0 15px;
 
-        min-height: 50px;
+    border-right: 2px dashed #ddd;
+    &:last-child{
+      border-right:0;
+    }
+
+    .inner{
+      min-height: 50px;
     }
 
     div.add, div.add:active, div.add:focus{
@@ -48,18 +61,17 @@
       transition: all 0.3s;
       &:hover{
         color:#222;
-        font-size: 45px;
       }
     }
 
     &.parent{
-      border:0;
+      //border:0;
       padding:0;
-      margin: 0 -2px;
+      //margin: 0 -2px;
       div.add{display: none}
-        [class^="col-md-"] div.add{
-          display: block;
-        }
+      [class^="col-md-"] div.add{
+        display: block;
+      }
     }
   }
 

@@ -3,16 +3,16 @@
 @section('content')
     <div class="row">
 
-      <a href="{{route('template.create')}}" >+ Create template</a>
+      <a href="{{route('template.create')}}" >+ Create Post Type</a>
         <div class="col-md-10 col-md-offset-0">
             @include("cms::layout.partial.list", [
-              "id" => "template-overview",
-              "title" => "All Templates",
-              "data" => $templates,
-              'resource' => 'template',
+              "id" => "posttype-overview",
+              "title" => "All Post Types",
+              "data" => $posttype,
+              'resource' => 'posttype',
               'list_params' =>
               [
-                'title'   => ["route" => 'template.show', "label" => "Naam"],
+                'title'   => ["route" => 'posttype.show', "label" => "Naam"],
                 'slug'   => "slug",
                 'view'   => "view",
               ]

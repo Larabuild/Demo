@@ -7825,22 +7825,34 @@ main#pagecontainer .panel-default .panel-heading {
 }
 
 .gridcontainer .row {
+  border-top: 5px solid #f5f5f5;
+  padding: 15px 0;
   margin: 0;
 }
 
-.gridcontainer [class^="col-md-"] {
-  border: 2px dashed #ddd;
-  margin-bottom: 10px;
-  margin-left: -1px;
-  margin-right: -1px;
-  padding: 15px;
+.gridcontainer .row > .inner {
+  display: table;
+  width: 100%;
 }
 
-.gridcontainer [class^="col-md-"] .inner {
+.gridcontainer [class^="col-"] {
+  float: none;
+  display: table-cell;
+  margin-bottom: 10px;
+  vertical-align: top;
+  padding: 0 15px;
+  border-right: 2px dashed #ddd;
+}
+
+.gridcontainer [class^="col-"]:last-child {
+  border-right: 0;
+}
+
+.gridcontainer [class^="col-"] .inner {
   min-height: 50px;
 }
 
-.gridcontainer [class^="col-md-"] div.add, .gridcontainer [class^="col-md-"] div.add:active, .gridcontainer [class^="col-md-"] div.add:focus {
+.gridcontainer [class^="col-"] div.add, .gridcontainer [class^="col-"] div.add:active, .gridcontainer [class^="col-"] div.add:focus {
   width: 100%;
   background: transparent;
   font-size: 40px;
@@ -7856,22 +7868,19 @@ main#pagecontainer .panel-default .panel-heading {
   transition: all 0.3s;
 }
 
-.gridcontainer [class^="col-md-"] div.add:hover, .gridcontainer [class^="col-md-"] div.add:active:hover, .gridcontainer [class^="col-md-"] div.add:focus:hover {
+.gridcontainer [class^="col-"] div.add:hover, .gridcontainer [class^="col-"] div.add:active:hover, .gridcontainer [class^="col-"] div.add:focus:hover {
   color: #222;
-  font-size: 45px;
 }
 
-.gridcontainer [class^="col-md-"].parent {
-  border: 0;
+.gridcontainer [class^="col-"].parent {
   padding: 0;
-  margin: 0 -2px;
 }
 
-.gridcontainer [class^="col-md-"].parent div.add {
+.gridcontainer [class^="col-"].parent div.add {
   display: none;
 }
 
-.gridcontainer [class^="col-md-"].parent [class^="col-md-"] div.add {
+.gridcontainer [class^="col-"].parent [class^="col-md-"] div.add {
   display: block;
 }
 

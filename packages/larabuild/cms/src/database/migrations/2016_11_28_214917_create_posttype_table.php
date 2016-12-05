@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTemplatesTable extends Migration
+class CreatePosttypeTable extends Migration
 {
   /**
   * Run the migrations.
@@ -12,7 +12,7 @@ class CreateTemplatesTable extends Migration
   */
   public function up()
   {
-    Schema::create("templates", function(Blueprint $table){
+    Schema::create("post_type", function(Blueprint $table){
       $table->increments("id");
       $table->string("slug");
       $table->string("title");
@@ -24,7 +24,7 @@ class CreateTemplatesTable extends Migration
     });
 
     Schema::table("posts", function(Blueprint $table){
-      $table->integer('template_id')->nullable();
+      $table->integer('type_id')->nullable();
     });
   }
 
@@ -35,9 +35,9 @@ class CreateTemplatesTable extends Migration
   */
   public function down()
   {
-    Schema::drop('templates');
+    Schema::drop('post_types');
     Schema::table("posts", function(Blueprint $table){
-      $table->dropColumn('template_id');
+      $table->dropColumn('type_id');
     });
   }
 }

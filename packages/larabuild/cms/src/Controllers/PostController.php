@@ -4,7 +4,7 @@ namespace Larabuild\Cms\Controllers;
 
 use Larabuild\Cms\Controllers\Controller;
 use Larabuild\Cms\Post;
-use Larabuild\Cms\Template;
+use Larabuild\Cms\PostType;
 
 use Illuminate\Http\Request;
 use Redirect;
@@ -27,8 +27,8 @@ class PostController extends Controller
   public function create(Request $request){
     $view = view("cms::post.single");
     $view->post = new Post();
-    if($request->has('template'))
-      $view->template_id = Template::where('slug', $request->get('template'))->first()->id;
+    if($request->has('type'))
+      $view->type_id = PostType::where('slug', $request->get('type'))->first()->id;
     return $view;
   }
 
