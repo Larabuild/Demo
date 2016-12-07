@@ -11,7 +11,7 @@ class DashboardController extends Controller
   public function index(){
     $layout = Layout::findDefault('dashboard');
     $view = view($layout->admin_view);
-    $view->layout = $layout->content;
+    $view->layout = $layout;
     $view->model = ["title" => "Fake Title"];
     $view->model['layout'] = $layout;
     return $view;

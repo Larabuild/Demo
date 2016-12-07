@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 
+use stdClass;
+
 class Layout extends Model {
     protected $table = "cms_layouts";
     protected $casts = ["content" => "json"];
@@ -29,5 +31,13 @@ class Layout extends Model {
           "title" => "Default $q layout"
         ]);
       }
+    }
+
+    protected function generatePanel($data){
+      $panel = [];
+      $panel['title'] = "Untitled";
+      $panel['position'] = $data['position'];
+      $panel['data'] = [];
+      return $panel;
     }
 }

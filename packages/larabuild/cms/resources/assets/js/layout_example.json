@@ -15,7 +15,7 @@
       "data": [
         {"position":[0,0,0], "key":"title"},
         {"position":[1,0,0], "content":"<h3>LET OP!!</h3><p>Dit is bijvoorbeeld een korte tekst tussen de velden in.</p>"},
-        {"position":[1,1,0], "view":"event.paneldata.details"}
+        {"position":[1,1,0], "view":"cms::dashboard.partial.welcome"}
       ]
     },
     {
@@ -24,8 +24,8 @@
       "matrix":[[12]],
       "data": [
         {"position":[0,0,0], "key":"title"},
-        {"position":[0,0,1], "content":"<h3>LET OP!!</h3><p>Dit is bijvoorbeeld een korte tekst tussen de velden in.</p>"}
-        {"position":[0,0,2], "view":"event.paneldata.details"}
+        {"position":[0,0,1], "content":"<h3>LET OP!!</h3><p>Dit is bijvoorbeeld een korte tekst tussen de velden in.</p>"},
+        {"position":[1,1,0], "view":"cms::dashboard.partial.welcome"}
       ]
     },
     {
@@ -34,9 +34,14 @@
       "matrix":[[12]],
       "data": [
         {"position":[0,0,0], "key":"title"},
-        {"position":[0,0,1], "content":"<h3>LET OP!!</h3><p>Dit is bijvoorbeeld een korte tekst tussen de velden in.</p>"}
-        {"position":[0,0,2], "view":"event.paneldata.details"}
+        {"position":[0,0,1], "content":"<h3>LET OP!!</h3><p>Dit is bijvoorbeeld een korte tekst tussen de velden in.</p>"},
+        {"position":[1,1,0], "view":"cms::dashboard.partial.welcome"}
       ]
+    },
+    {
+      "title":"Untitled",
+      "position":[0,1,0],
+      "data":[]
     }
   ]
 }

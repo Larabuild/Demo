@@ -22,14 +22,12 @@ require('vue-sortable');
 
 import Sortable from "sortablejs"
 window.Sortable = Sortable;
-console.log(Sortable)
 
 Vue.directive('sortable', {
   inserted: function (el, binding) {
     var sortable = new Sortable(el, binding.value || {});
   }
 });
-
 
 /**
 * We'll register a HTTP interceptor to attach the "CSRF" header to each of

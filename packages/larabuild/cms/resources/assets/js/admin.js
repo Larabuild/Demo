@@ -23,7 +23,7 @@ Vue.directive('sortable', {
         var sortable = new Sortable(el, binding.value || {});
       }
     })
-
+    
 const app = new Vue({
   el: '#app',
 });

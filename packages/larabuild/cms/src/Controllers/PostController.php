@@ -29,14 +29,14 @@ class PostController extends Controller
     $layout = Layout::findDefault('posts');
     $view->model = new Post();
     $view->model->layout_id = $layout->id;
-    $view->layout = $view->model->layout->content;
+    $view->layout = $view->model->layout;
     return $view;
   }
 
   public function show(Request $request, $post_id){
     $view = view("cms::single.default");
     $view->model = Post::find($post_id);
-    $view->layout = $view->model->layout->content;
+    $view->layout = $view->model->layout;
     return $view;
   }
 

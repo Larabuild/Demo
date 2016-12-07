@@ -11,8 +11,23 @@
 export default {
   props: ['title'],
   mounted() {
-    console.log(this)
     this.rendered = 1;
+  },
+  computed:{
+    coords: function(){
+      console.log(this);
+      return this.row + "," + this.column + "," + this.index;
+    }
+  },
+  methods:{
+    removePanel:function(){
+      var tasks = {
+        resolve:[
+          ['remove-panel', {position:(this.coords + "," + this.$children.length).split()}]
+        ]
+      }
+      this.$root.$emit('grid.save', tasks, this);
+    }
   }
 }
 </script>
