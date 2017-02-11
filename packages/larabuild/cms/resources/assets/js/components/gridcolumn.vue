@@ -33,8 +33,8 @@ export default {
       this.update_panel_position(oldpos, newpos)
     },
     onUpdate: function(ev){
-      var oldpos = [(this.coords + "," + ev.oldIndex).split(",").map(Number)];
-      var newpos = [(this.coords + "," + ev.newIndex).split(",").map(Number)];
+      var oldpos = (this.coords + "," + ev.oldIndex).split(",").map(Number);
+      var newpos = (this.coords + "," + ev.newIndex).split(",").map(Number);
       this.update_panel_position(oldpos, newpos)
     },
     create_panel: function(){

@@ -41,6 +41,7 @@ class LayoutController extends Controller
 
   protected function remove_panel($layout, $data){
     $content = $layout->content;
-    dd($content['panels']);
+    $layout->remove_panel($data['position']);
+    $layout->save();
   }
 }

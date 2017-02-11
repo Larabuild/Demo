@@ -1,6 +1,6 @@
 <template>
   <div class="panel panel-default list-group-item">
-    <div class="panel-heading">{{title}}</div>
+    <div class="panel-heading">{{coords}} - {{title}} <small class="btn" style="float:right;" @click="removePanel" >remove</small></div>
     <div class="panel-body">
       <slot></slot>
     </div>
@@ -9,23 +9,27 @@
 
 <script>
 export default {
-  props: ['title'],
+  props: ['title', 'position'],
   mounted() {
     this.rendered = 1;
   },
   computed:{
     coords: function(){
-      return this.row + "," + this.column + "," + this.index;
+      console.log(this.position);
+      //var pos = this.position.split(',');
+      return this.position //pos[0] + "," + pos[1] + "," + this.index;
     }
   },
   methods:{
-    removePanel:function(){ 
+    removePanel:function(){
       var tasks = {
         resolve:[
-          ['remove_panel', {position:(this.coords + "," + this.$children.length).split()}]
+          ['remove_panel', { position:this.coords.split(',') }]
         ]
       }
       this.$root.$emit('grid.save', tasks, this);
+      $(this.$el).remove()
+      console.log(this);
     }
   }
 }
