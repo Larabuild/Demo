@@ -18,7 +18,7 @@ class CmsServiceProvider extends ServiceProvider
     {
       $this->loadMigrationsFrom(__DIR__.'/database/migrations');
       $this->loadRoutesFrom(__DIR__.'/routes.php');
-      $this->loadViewsFrom(__DIR__.'/views', 'cms');
+      $this->loadViewsFrom(__DIR__.'/../resources/views', 'cms');
 
       Post::observe(PostObserver::class);
 
