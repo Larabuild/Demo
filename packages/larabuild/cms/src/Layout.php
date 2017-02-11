@@ -41,8 +41,13 @@ class Layout extends Model {
     return $panel;
   }
 
+  public function remove_panel($pos){
+    $panelkey = $this->selectPanelKey($pos);
+
+  }
+
   public function move_panel($from, $to){
-    $panelkey = $this->findPanelKey($from);
+    $panelkey = $this->selectPanelKey($from);
     dump($panelkey);
     if(isset($panelkey)){
       $this->free_location($to);
@@ -53,9 +58,9 @@ class Layout extends Model {
     }
   }
 
-  public function free_location($position){
-    $panels_to_update = collect($this->content['panels'])->filter(function($panel, $key) use($position) {
-      $select = ($position[1] == $panel['position'][1] && $position[2] <= $panel['position'][2]);
+  public function free_location($pos){
+    $panels_to_update = $this->panels->filter(function($panel, $key) use($pos) {
+      $select = ($pos[1] == $panel['position'][1] && $pos[2] <= $panel['position'][2]);
       return $select;
     });
 
@@ -67,9 +72,9 @@ class Layout extends Model {
     return $this->content = $content;
   }
 
-  public function close_gap($position){
-    $panels_to_update = collect($this->content['panels'])->filter(function($panel, $key) use($position) {
-      $select = ($position[1] == $panel['position'][1] && $position[2] <= $panel['position'][2]);
+  public function close_gap($pos){
+    $panels_to_update = $this->panels->filter(function($panel, $key) use($pos) {
+      $select = ($pos[1] == $panel['position'][1] && $pos[2] <= $panel['position'][2]);
       return $select;
     });
 
@@ -85,7 +90,11 @@ class Layout extends Model {
     return collect($this->content['panels']);
   }
 
-  public function findPanelKey($position){
-    return $this->panels->where('position', $position)->keys()->first();
+  public function selectPanel($pos){
+    return $this->panels->where('position', $pos)->first();
+  }
+
+  public function selectPanelKey($pos){
+    return $this->panels->where('position', $pos)->keys()->first();
   }
 }

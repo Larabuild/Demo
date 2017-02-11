@@ -19,7 +19,7 @@ export default {
     }
   },
   methods:{
-    removePanel:function(){
+    removePanel:function(){ 
       var tasks = {
         resolve:[
           ['remove_panel', {position:(this.coords + "," + this.$children.length).split()}]
