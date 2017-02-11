@@ -8,16 +8,14 @@ use Illuminate\Support\Facades\View;
 
 use Config;
 
-use Larabuild\Cms\Observers\PostObserver;
-
 class CmsServiceProvider extends ServiceProvider
 {
     protected $namespace = "Larabuild\Cms";
 
     public function boot()
     {
-      $this->loadMigrationsFrom(__DIR__.'/database/migrations');
-      $this->loadRoutesFrom(__DIR__.'/routes.php');
+      $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+      $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
       $this->loadViewsFrom(__DIR__.'/../resources/views', 'cms');
 
       Post::observe(PostObserver::class);
