@@ -8,10 +8,10 @@ Route::group(['namespace' => 'Controllers', 'middleware' => ['web']], function (
     Route::resource('post', 'PostController');
     Route::resource('user', 'UserController');
     Route::resource('setting', 'SettingsController');
-    Route::resource('posttype', 'PostTypeController');
+    //Route::resource('posttype', 'PostTypeController');
 
     Route::get("/settings/bundle/{bundle}", ['as' => "setting.bundle.show", "uses" => "SettingsController@show_bundle"]);
-    Route::get("/post/type/{slug}", ['as' => "post.show.type", "uses" => "PostTypeController@show_posts"]);
+    //Route::get("/post/type/{slug}", ['as' => "post.show.type", "uses" => "PostTypeController@show_posts"]);
 
     Route::post("/layout/autosave", ['as' => "layout.autosave", "uses" => "LayoutController@autosave"]);
 

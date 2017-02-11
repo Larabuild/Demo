@@ -32,4 +32,15 @@ class LayoutController extends Controller
     $layout->content = $content;
     $layout->save();
   }
+
+  protected function move_panel($layout, $data){
+    $content = $layout->content;
+    $layout->move_panel($data['from'], $data['to']);
+    $layout->save();
+  }
+
+  protected function remove_panel($layout, $data){
+    $content = $layout->content;
+    dd($content['panels']);
+  }
 }

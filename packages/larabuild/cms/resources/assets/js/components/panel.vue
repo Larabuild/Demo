@@ -15,7 +15,6 @@ export default {
   },
   computed:{
     coords: function(){
-      console.log(this);
       return this.row + "," + this.column + "," + this.index;
     }
   },
@@ -23,7 +22,7 @@ export default {
     removePanel:function(){
       var tasks = {
         resolve:[
-          ['remove-panel', {position:(this.coords + "," + this.$children.length).split()}]
+          ['remove_panel', {position:(this.coords + "," + this.$children.length).split()}]
         ]
       }
       this.$root.$emit('grid.save', tasks, this);

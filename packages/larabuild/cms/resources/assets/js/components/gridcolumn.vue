@@ -47,7 +47,7 @@ export default {
     },
     update_panel_position:function(oldpos, newpos){
       var tasks = {resolve:[
-        ['move-panel', {from: oldpos, to:newpos}]
+        ['move_panel', {from: oldpos, to:newpos}]
       ]}
       this.$root.$emit('grid.save', tasks, this);
     }
